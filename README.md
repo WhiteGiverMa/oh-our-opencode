@@ -4,9 +4,11 @@
 
 构建开源、模块化、全链路透明的综合智能体环境。
 
-综合的、模块化的 [OpenCode](https://github.com/anomalyco/opencode) 插件和智能体工具，专注于 OpenCode v2，受 [OmO](https://github.com/code-yeongyu/oh-my-openagent) 启发。
+综合的、模块化的 [OpenCode](https://github.com/anomalyco/opencode) 插件和智能体工具，专注于 OpenCode v2。
 
-各组件可拆卸、可组装：不必为了一个不顺心的工具替换整套系统，也不必忍受单体插件的功能捆绑——想要的和不想要的长在一起，一旦形成依赖就无法部分舍弃，只能任它像八爪鱼一样骑在本体头上，再装什么外部插件或环境工具都要先看它的脸色。
+本项目受 [OmO](https://github.com/code-yeongyu/oh-my-openagent) 启发，站在巨人的肩膀上——衷心感谢它的探索与开拓。
+
+各组件可拆卸、可组装：喜欢哪个装哪个，想换哪个换哪个，不必接受整套的功能捆绑。
 
 宗旨：环境即 harness，harness 由智能体身边的一切组成。
 

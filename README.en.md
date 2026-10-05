@@ -6,7 +6,7 @@ Building an open, modular, fully transparent agent environment.
 
 A modular collection of [OpenCode](https://github.com/anomalyco/opencode) plugins and agent tooling, focused on OpenCode v2, inspired by [OmO](https://github.com/code-yeongyu/oh-my-openagent).
 
-Every component is detachable and composable: no need to replace a whole system because of one disagreeable tool, and no plugins coupling themselves to the OpenCode core like an octopus hug.
+Every component is detachable and composable: no need to replace a whole system because of one disagreeable tool, and no monolithic plugin holding you hostage — where the features you want and the ones you don't grow together, where dependency means you can no longer drop parts of it, and where it ends up riding on top of the host like an octopus, so every other plugin or environment tool has to defer to it first.
 
 The principle: the environment is the harness, and the harness is everything around the agent.
 

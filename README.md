@@ -6,7 +6,7 @@
 
 综合的、模块化的 [OpenCode](https://github.com/anomalyco/opencode) 插件和智能体工具，专注于 OpenCode v2，受 [OmO](https://github.com/code-yeongyu/oh-my-openagent) 启发。
 
-各组件可拆卸、可组装：不必为了一个不顺心的工具替换整套系统，也不必忍受插件八爪鱼抱抱式地与 OpenCode 本体耦合。
+各组件可拆卸、可组装：不必为了一个不顺心的工具替换整套系统，也不必忍受单体插件的功能捆绑——想要的和不想要的长在一起，一旦形成依赖就无法部分舍弃，只能任它像八爪鱼一样骑在本体头上，再装什么外部插件或环境工具都要先看它的脸色。
 
 宗旨：环境即 harness，harness 由智能体身边的一切组成。
 

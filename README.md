@@ -31,14 +31,14 @@
 
 ## 友情链接
 
-环境里在用的第三方组件——感谢它们的作者。
+维护者环境里在用的第三方组件——感谢它们的作者。它们与上述自制组件组成了完整的Agent Harness。
 
 | 项目 | 许可 | 说明 |
 | --- | --- | --- |
 | [oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent) | SUL 1.0 | OMO，v1 侧的一体化智能体层，本系列的灵感来源与迁移原点 |
 | [opencode-pty](https://github.com/shekohex/opencode-pty) | MIT | PTY 会话插件：持久交互终端，替代一次性 shell |
 | [opencode-supermemory](https://github.com/supermemoryai/opencode-supermemory) | MIT | Supermemory 持久记忆插件 |
-| [OpenViking](https://github.com/volcengine/OpenViking) | Apache-2.0 | `@openviking/opencode-plugin`，资源与检索增强 |
+| [OpenViking](https://github.com/volcengine/OpenViking) | AGPL-3.0 | `@openviking/opencode-plugin`，资源与检索增强 |
 | [opencode-quota](https://github.com/slkiser/opencode-quota) | MIT | `@slkiser/opencode-quota`，额度与价格状态提示 |
 | [Hindsight](https://github.com/vectorize-io/hindsight) | MIT | 仿生记忆引擎，本地 MCP 服务 |
 | [Anysearch](https://api.anysearch.com) | 服务 | 通用 + 垂直域检索 API，经 MCP 接入 |

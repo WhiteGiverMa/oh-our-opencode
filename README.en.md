@@ -31,14 +31,14 @@ Empowering everyone to build a highly personal agent.
 
 ## Friend links
 
-Third-party components in use in our environment — thanks to their authors.
+Third-party components in my use in our environment — thanks to their authors. They assemble a full agent harness with comps our made above.
 
 | Project | License | Notes |
 | --- | --- | --- |
 | [oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent) | SUL 1.0 | OMO, the integrated agent layer on the v1 side; the inspiration and migration origin of this collection |
 | [opencode-pty](https://github.com/shekohex/opencode-pty) | MIT | PTY session plugin: persistent interactive terminals instead of one-shot shells |
 | [opencode-supermemory](https://github.com/supermemoryai/opencode-supermemory) | MIT | Supermemory persistent-memory plugin |
-| [OpenViking](https://github.com/volcengine/OpenViking) | Apache-2.0 | `@openviking/opencode-plugin`, resource and retrieval augmentation |
+| [OpenViking](https://github.com/volcengine/OpenViking) | AGPL-3.0 | `@openviking/opencode-plugin`, resource and retrieval augmentation |
 | [opencode-quota](https://github.com/slkiser/opencode-quota) | MIT | `@slkiser/opencode-quota`, quota and pricing status toasts |
 | [Hindsight](https://github.com/vectorize-io/hindsight) | MIT | Biomimetic memory engine, served as a local MCP |
 | [Anysearch](https://api.anysearch.com) | service | General and vertical search API, connected over MCP |

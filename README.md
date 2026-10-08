@@ -24,9 +24,26 @@
 | --- | --- |
 | [opencode-folio](https://github.com/WhiteGiverMa/opencode-folio) | 只读查询 OpenCode 会话历史的 CLI：`list` / `search` / `read` / `info`，直读 SQLite，配套 agent skill |
 | [opencode-lsp](https://github.com/WhiteGiverMa/opencode-lsp) | 独立 stdio MCP 服务器，为 OpenCode v1/v2 提供 LSP 诊断、定义、引用、符号与重命名 |
+| [opencode-prompts](https://github.com/WhiteGiverMa/opencode-prompts) | 角色提示词模板：给已有角色换上自己写的完整正文，按模型挑模板，槽位严格校验 |
 | [opencode-webfetch-redirect-guard](https://github.com/WhiteGiverMa/opencode-webfetch-redirect-guard) | `webfetch` 重定向守卫：在权限边界内解析跳转链，把最终 URL 交给原生工具 |
 | [opencode-write-existing-file-guard](https://github.com/WhiteGiverMa/opencode-write-existing-file-guard) | `write` 覆盖守卫：已存在的文件须先读后写，批准一次性消费 |
 | [opencode-logo-pulse](https://github.com/WhiteGiverMa/opencode-logo-pulse) | TUI 插件：复活 OpenCode 早期版本主页 logo 的蓄力脉冲彩蛋 |
+
+## 友情链接
+
+环境里在用的第三方组件——感谢它们的作者。
+
+| 项目 | 许可 | 说明 |
+| --- | --- | --- |
+| [oh-my-openagent](https://github.com/code-yeongyu/oh-my-openagent) | SUL 1.0 | OMO，v1 侧的一体化智能体层，本系列的灵感来源与迁移原点 |
+| [opencode-pty](https://github.com/shekohex/opencode-pty) | MIT | PTY 会话插件：持久交互终端，替代一次性 shell |
+| [opencode-supermemory](https://github.com/supermemoryai/opencode-supermemory) | MIT | Supermemory 持久记忆插件 |
+| [OpenViking](https://github.com/volcengine/OpenViking) | Apache-2.0 | `@openviking/opencode-plugin`，资源与检索增强 |
+| [opencode-quota](https://github.com/slkiser/opencode-quota) | MIT | `@slkiser/opencode-quota`，额度与价格状态提示 |
+| [Hindsight](https://github.com/vectorize-io/hindsight) | MIT | 仿生记忆引擎，本地 MCP 服务 |
+| [Anysearch](https://api.anysearch.com) | 服务 | 通用 + 垂直域检索 API，经 MCP 接入 |
+| [ast-grep](https://github.com/ast-grep/ast-grep)（[ast-grep-skill](https://github.com/code-yeongyu/ast-grep-skill)） | MIT | 结构化代码搜索改写工具；本地 `opencode-ast-grep` 为其 skill 的简化迁移 |
+| [codegraph](https://github.com/colbymchenry/codegraph) | MIT | 代码知识图谱 CLI；本地 `opencode-codegraph` 为其 skill 包装 |
 
 ## 许可
 

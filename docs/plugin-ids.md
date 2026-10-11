@@ -19,9 +19,9 @@
 | `opencode-write-existing-file-guard` | `opencode-write-existing-file-guard` | `o3p.tool.write-existing-file-guard` | v1/v2 server |
 | `opencode-webfetch-redirect-guard` | `webfetch-redirect-guard` | `o3p.tool.webfetch-redirect-guard` | v1/v2 server |
 | `opencode-logo-pulse` | `local.logo-pulse` | `o3p.terminal.logo-pulse` | v1 TUI |
-| `opencode-suspend-guard` | 已采用新规范 | `o3p.terminal.suspend-guard` | v2 TUI |
+| `opencode-terminal-guard` | `o3p.terminal.suspend-guard` | `o3p.terminal.guard` | v2 TUI |
 
-Suspend Guard 的确认命令为 `o3p.terminal.suspend-guard.confirm`。
+Terminal Guard 只守卫 Ctrl+C 退出和 Ctrl+Z 挂起，挂起确认命令为 `o3p.terminal.guard.suspend`；Ctrl+C 拦截原生 `app.exit`，不改变其余 Ctrl+C 操作。前身为 `opencode-suspend-guard`。
 
 ## 加载与开关
 

@@ -25,6 +25,7 @@
 | [opencode-folio](https://github.com/WhiteGiverMa/opencode-folio) | 只读查询 OpenCode 会话历史的 CLI：`list` / `search` / `read` / `info`，直读 SQLite，配套 agent skill |
 | [opencode-lsp](https://github.com/WhiteGiverMa/opencode-lsp) | 独立 stdio MCP 服务器，为 OpenCode v1/v2 提供 LSP 诊断、定义、引用、符号与重命名 |
 | [opencode-prompts](https://github.com/WhiteGiverMa/opencode-prompts) | 角色提示词模板：给已有角色换上自己写的完整正文，按模型挑模板，槽位严格校验 |
+| [opencode-context-observe](https://github.com/WhiteGiverMa/opencode-context-observe) | 查看实际模型请求：增量、原始上下文与差异，配套 TUI 和可选浏览器扩展 |
 | [opencode-webfetch-redirect-guard](https://github.com/WhiteGiverMa/opencode-webfetch-redirect-guard) | `webfetch` 重定向守卫：在权限边界内解析跳转链，把最终 URL 交给原生工具 |
 | [opencode-write-existing-file-guard](https://github.com/WhiteGiverMa/opencode-write-existing-file-guard) | `write` 覆盖守卫：已存在的文件须先读后写，批准一次性消费 |
 | [opencode-logo-pulse](https://github.com/WhiteGiverMa/opencode-logo-pulse) | TUI 插件：复活 OpenCode 早期版本主页 logo 的蓄力脉冲彩蛋 |

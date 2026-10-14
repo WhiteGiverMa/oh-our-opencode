@@ -16,6 +16,7 @@
 | 仓库 | 原 ID | 当前 ID | 入口 |
 | --- | --- | --- | --- |
 | `opencode-prompts` | `opencode-prompts` | `o3p.prompt.templates` | v2 server |
+| `opencode-context-observe` | 无 | `o3p.context.observe` | v2 server / TUI |
 | `opencode-write-existing-file-guard` | `opencode-write-existing-file-guard` | `o3p.tool.write-existing-file-guard` | v1/v2 server |
 | `opencode-webfetch-redirect-guard` | `webfetch-redirect-guard` | `o3p.tool.webfetch-redirect-guard` | v1/v2 server |
 | `opencode-logo-pulse` | `local.logo-pulse` | `o3p.terminal.logo-pulse` | v1 TUI |

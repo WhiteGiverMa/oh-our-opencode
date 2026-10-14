@@ -25,6 +25,7 @@ Empowering everyone to build a highly personal agent.
 | [opencode-folio](https://github.com/WhiteGiverMa/opencode-folio) | Read-only CLI for OpenCode session history: `list` / `search` / `read` / `info` directly over SQLite, with a companion agent skill |
 | [opencode-lsp](https://github.com/WhiteGiverMa/opencode-lsp) | Standalone stdio MCP server giving OpenCode v1/v2 LSP diagnostics, definitions, references, symbols, and rename |
 | [opencode-prompts](https://github.com/WhiteGiverMa/opencode-prompts) | Per-agent prompt templates: replace an existing agent's system prompt with your own text, pick templates per model, strict slot validation |
+| [opencode-context-observe](https://github.com/WhiteGiverMa/opencode-context-observe) | Inspect actual model requests: incremental context, raw payloads, and diffs, with TUI and optional browser viewers |
 | [opencode-webfetch-redirect-guard](https://github.com/WhiteGiverMa/opencode-webfetch-redirect-guard) | `webfetch` redirect guard: resolves redirect chains inside the permission boundary and hands the final URL to the native tool |
 | [opencode-write-existing-file-guard](https://github.com/WhiteGiverMa/opencode-write-existing-file-guard) | `write` overwrite guard: existing files must be read before written; approvals are consumed once |
 | [opencode-logo-pulse](https://github.com/WhiteGiverMa/opencode-logo-pulse) | TUI plugin reviving the charge-and-pulse easter egg from early OpenCode home logos |

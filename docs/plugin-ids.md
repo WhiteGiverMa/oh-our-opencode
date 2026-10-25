@@ -6,7 +6,7 @@
 
 - 插件 ID：`o3p.<domain>.<feature>`，全小写，点分层，功能名内多词用连字符。
 - `domain` 按功能领域划分，不按 server/TUI 或 v1/v2 实现划分；同一插件的各入口共用 ID。
-- `prompt` 为提示词模板，`tool` 为原生工具增强，`terminal` 为终端交互与显示。
+- `prompt` 为提示词模板，`tool` 为原生工具增强，`terminal` 为终端交互与显示，`agent` 为智能体协作与委托路由。
 - npm 包、仓库和目录仍采用 `opencode-<feature>`，不随运行时 ID 改名。
 - 自有 TUI 命令使用 `<plugin-id>.<action>`。命令 ID 是独立标识，宿主不会自动添加插件前缀。
 - `opencode.*` 留给宿主；不为第三方项目冒用 `o3p.*`。
@@ -16,6 +16,7 @@
 | 仓库 | 原 ID | 当前 ID | 入口 |
 | --- | --- | --- | --- |
 | `opencode-prompts` | `opencode-prompts` | `o3p.prompt.templates` | v2 server |
+| `opencode-cross-review` | 无 | `o3p.agent.cross-review` | v2 server |
 | `opencode-context-observe` | 无 | `o3p.context.observe` | v2 server / TUI |
 | `opencode-write-existing-file-guard` | `opencode-write-existing-file-guard` | `o3p.tool.write-existing-file-guard` | v1/v2 server |
 | `opencode-webfetch-redirect-guard` | `webfetch-redirect-guard` | `o3p.tool.webfetch-redirect-guard` | v1/v2 server |
@@ -23,6 +24,8 @@
 | `opencode-terminal-guard` | `o3p.terminal.suspend-guard` | `o3p.terminal.guard` | v2 TUI |
 
 Terminal Guard 只守卫 Ctrl+C 退出和 Ctrl+Z 挂起，挂起确认命令为 `o3p.terminal.guard.suspend`；Ctrl+C 拦截原生 `app.exit`，不改变其余 Ctrl+C 操作。前身为 `opencode-suspend-guard`。
+
+Cross Review 只处理原生 `subagent` 工具：按有向的 `driver model -> reviewer model` 映射注入 `input.model`，只影响配置的领航员 agent；主代理显式传入的 `model` 不覆盖。映射任意一侧不可用时回退 OpenCode 原生解析，并在工具结果追加 `[cross-review]` 警告。
 
 ## 加载与开关
 
@@ -44,10 +47,10 @@ Terminal Guard 只守卫 Ctrl+C 退出和 Ctrl+Z 挂起，挂起确认命令为 
 
 ID 改名需要同步插件管理器中的精确开关与通配规则。包路径不变时，无需为改 ID 重写包路径。
 
-宿主插件存储按 ID 分区；有持久化状态的插件必须明确迁移数据，不能把新 ID 下的空数据当作迁移完成。这五个插件没有使用宿主 ID 分区存储，不迁移或直接编辑会话数据库。
+宿主插件存储按 ID 分区；有持久化状态的插件必须明确迁移数据，不能把新 ID 下的空数据当作迁移完成。这些插件没有使用宿主 ID 分区存储，不迁移或直接编辑会话数据库。
 
 提示词的 `<<<opencode-prompts|...>>>` 标记、日志名、错误前缀、User-Agent、原生工具名称及 OMO `disabled_hooks` 都不是运行时插件 ID，本轮保持不变。保留标记确保已管理的角色正文仍可恢复和重新渲染。
 
 本地切换先备份配置并在隔离副本构建验证，再部署完整产物；不在当前会话中重启承载它的服务。既有插件保留包路径与选项，不增加旧 ID 别名。
 
-提示词种子只在请求准入时生成，内存状态不跨插件世代保留。运行中不能在模型或工具循环内热卸载该插件：等待受影响会话通过 `session.wait` 到达空闲，并确认没有活跃会话，再切换完整产物。之后由新的正常用户请求准入重新生成种子；不能把跳过准入的 synthetic/resume 通知当作安全恢复路径。
+提示词种子只在请求准入时生成，内存状态不跨插件世代保留。运行中不能在模型或工具循环内热卸载该插件：等待受影响会话通过 `session.wait` 到达空闲，并确认没有活跃会话，再切换完整产物。之后由新的正常用户请求准入重新生成种子；不能把跳过准入的 synthetic/resume 通知当作安全恢复路径。2026-10-25 起，热重载后旧世代遗留的完整 region 由 context 直接接管，日志记 `seed-deferred`；外来、重复、乱序或改写 marker 仍阻断。

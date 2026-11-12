@@ -30,7 +30,6 @@ Empowering everyone to build a highly personal agent.
 | [opencode-webfetch-redirect-guard](https://github.com/WhiteGiverMa/opencode-webfetch-redirect-guard) | `webfetch` redirect guard: resolves redirect chains inside the permission boundary and hands the final URL to the native tool |
 | [opencode-write-existing-file-guard](https://github.com/WhiteGiverMa/opencode-write-existing-file-guard) | `write` overwrite guard: existing files must be read before written; approvals are consumed once |
 | [opencode-logo-pulse](https://github.com/WhiteGiverMa/opencode-logo-pulse) | TUI plugin reviving the charge-and-pulse easter egg from early OpenCode home logos |
-| [opencode-agy-anti-truncation](https://github.com/WhiteGiverMa/opencode-agy-anti-truncation) | Antigravity anti-truncation: a synthetic tool channel carries long replies and tool continuations, shipped as an OpenCode v2 plugin and a local HTTP gateway |
 
 ## Friend links
 

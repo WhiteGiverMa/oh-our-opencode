@@ -30,6 +30,7 @@
 | [opencode-webfetch-redirect-guard](https://github.com/WhiteGiverMa/opencode-webfetch-redirect-guard) | `webfetch` 重定向守卫：在权限边界内解析跳转链，把最终 URL 交给原生工具 |
 | [opencode-write-existing-file-guard](https://github.com/WhiteGiverMa/opencode-write-existing-file-guard) | `write` 覆盖守卫：已存在的文件须先读后写，批准一次性消费 |
 | [opencode-logo-pulse](https://github.com/WhiteGiverMa/opencode-logo-pulse) | TUI 插件：复活 OpenCode 早期版本主页 logo 的蓄力脉冲彩蛋 |
+| [opencode-agy-anti-truncation](https://github.com/WhiteGiverMa/opencode-agy-anti-truncation) | 反重力渠道反截断：用合成工具通道承接长文与工具续写，提供 OpenCode v2 插件与本地 HTTP 网关 |
 
 ## 友情链接
 

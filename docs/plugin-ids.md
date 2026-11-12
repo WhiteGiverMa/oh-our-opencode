@@ -6,7 +6,7 @@
 
 - 插件 ID：`o3p.<domain>.<feature>`，全小写，点分层，功能名内多词用连字符。
 - `domain` 按功能领域划分，不按 server/TUI 或 v1/v2 实现划分；同一插件的各入口共用 ID。
-- `prompt` 为提示词模板，`tool` 为原生工具增强，`terminal` 为终端交互与显示，`agent` 为智能体协作与委托路由。
+- `prompt` 为提示词模板，`tool` 为原生工具增强，`terminal` 为终端交互与显示，`agent` 为智能体协作与委托路由，`provider` 为 provider 请求/响应通道适配。
 - npm 包、仓库和目录仍采用 `opencode-<feature>`，不随运行时 ID 改名。
 - 自有 TUI 命令使用 `<plugin-id>.<action>`。命令 ID 是独立标识，宿主不会自动添加插件前缀。
 - `opencode.*` 留给宿主；不为第三方项目冒用 `o3p.*`。
@@ -22,10 +22,13 @@
 | `opencode-webfetch-redirect-guard` | `webfetch-redirect-guard` | `o3p.tool.webfetch-redirect-guard` | v1/v2 server |
 | `opencode-logo-pulse` | `local.logo-pulse` | `o3p.terminal.logo-pulse` | v1 TUI |
 | `opencode-terminal-guard` | `o3p.terminal.suspend-guard` | `o3p.terminal.guard` | v2 TUI |
+| `opencode-agy-anti-truncation` | 无 | `o3p.provider.agy-anti-truncation` | v2 server / 独立网关 |
 
 Terminal Guard 只守卫 Ctrl+C 退出和 Ctrl+Z 挂起，挂起确认命令为 `o3p.terminal.guard.suspend`；Ctrl+C 拦截原生 `app.exit`，不改变其余 Ctrl+C 操作。前身为 `opencode-suspend-guard`。
 
 Cross Review 只处理原生 `subagent` 工具：按有向的 `driver model -> reviewer model` 映射注入 `input.model`，只影响配置的领航员 agent；主代理显式传入的 `model` 不覆盖。映射任意一侧不可用时回退 OpenCode 原生解析，并在工具结果追加 `[cross-review]` 警告。
+
+AGY Anti-Truncation 把 assistant 正文搬进合成工具 `tui_markdown_reply` 的参数，响应侧再解码回 `delta.content` / `message.content`，避开反重力渠道对正文流的截断与敏感词拦截。OpenCode v2 插件与独立网关共用 `src/core.js`；插件按 `providerID/modelID` 精确注册 `http.request` / `http.response`，默认目标为 `agy/gemini-4-argon`。
 
 ## 加载与开关
 
